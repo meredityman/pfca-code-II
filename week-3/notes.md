@@ -1,3 +1,5 @@
+## Command line
+
 Clear the screen
 `clear`
 
@@ -10,9 +12,10 @@ Print working directory
 List curent directory
 `ls`
 
-
 Change directory (to "week-3")
 `cd week-3/`
+
+## Virtualenv
 
 Check virtualenv version
 `python -m virtualenv --version`
