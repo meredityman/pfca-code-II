@@ -4,7 +4,6 @@ import os
 def main():
 
     root_path = Path("./data")
-    root_path.mkdir()
 
     if(not root_path.exists()):
         print("Path doesn't exist!")
@@ -14,6 +13,10 @@ def main():
         raise
     else:
         print("Folder exists")
+
+    root_path.mkdir()
+
+
 
     
     days = [
