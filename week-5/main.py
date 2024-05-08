@@ -1,29 +1,35 @@
 from pathlib import Path
+import datetime as datetime
 import os
 
 def main():
 
     root_path = Path("./data")
 
+    start_date = datetime.date(2024, 1, 1)
+    end_date   = datetime.date.today()
 
-    # if (root_path.exists()):
-    #     raise FileExistsError("Path exists!")
 
-    root_path.mkdir(exist_ok=True)
+    if( start_date >= end_date  ):
+        raise ValueError("Start date must by earlier than end date")
 
-    months = [
-        "Jan",
-        "Feb",
-        "Mar"
-    ]
+    current_date = start_date
+    while(current_date <= end_date):
+        print(current_date)
+        month    = current_date.strftime("%B")
+        year     = current_date.strftime("%Y")
+        day_name = current_date.strftime("%A")  
+        day      = current_date.strftime("%d")  
 
-    for month in months:
-        month_path = Path(root_path, month)
-        month_path.mkdir()
-        for day in range(31):
-            directory_path = Path(month_path, str(day+1))
-            print(directory_path)
-            directory_path.mkdir()
+        print(month, year, day_name, day)
+
+        current_date += datetime.timedelta(days=1)
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
