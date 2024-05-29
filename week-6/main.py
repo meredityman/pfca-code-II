@@ -2,6 +2,10 @@ from pathlib import Path
 import datetime as datetime
 import os
 
+
+
+
+
 def main():
 
     root_path = Path("./data")
@@ -32,11 +36,6 @@ def main():
             fp.write(diary_text)
 
         current_date += datetime.timedelta(days=1)
-
-
-
-
-
 
 
 
