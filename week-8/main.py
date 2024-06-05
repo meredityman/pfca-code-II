@@ -6,8 +6,8 @@ def main(args):
 
 
     image = Image.open(args.input_path)
-    image.convert("RGB")
-    
+    image = image.convert("RGB")
+
     (width, height) = image.size
     pixels = image.load()
     print(f"Image Size: width={width}, height={height}")
